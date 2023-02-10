@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Resources.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\__resources__\2_C++\C++_Projekte_für_Fortgeschrittene_CMake,_Tests_und_Tooling\3CPPProjektefürFortgeschritteneCMakeTestsundTooling.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\__resources__\cmdlP.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="file.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="..\..\__resources__\2_C++\C++_Projekte_für_Fortgeschrittene_CMake,_Tests_und_Tooling\2Kursmaterialien.txt" />
+    <Text Include="..\..\__resources__\2_C++\C++_Projekte_für_Fortgeschrittene_CMake,_Tests_und_Tooling\1allInstallations.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\__resources__\000_C++-Udemy-Kurs\lectures\RuleOfFive.pptx" />
+    <None Include="..\..\__resources__\000_C++-Udemy-Kurs\lectures\SmartPointer.pptx" />
+    <None Include="..\..\__resources__\000_C++-Udemy-Kurs\lectures\StackVsHeap.pptx" />
+    <None Include="..\..\__resources__\000_C++-Udemy-Kurs\lectures\StandardTemplateLibrary.pptx" />
+    <None Include="..\..\__resources__\000_C++-Udemy-Kurs\lectures\Threads.pptx" />
+    <None Include="..\..\__resources__\000_C++-Udemy-Kurs\lectures\WhatIsCpp.pptx" />
+    <None Include="..\..\__resources__\000_C++-Udemy-Kurs\lectures\Introduction.pptx" />
+    <None Include="..\..\__resources__\000_C++-Udemy-Kurs\lectures\LambdaExpressions.pptx" />
+    <None Include="..\..\__resources__\000_C++-Udemy-Kurs\lectures\ObjectOrientedProgramming.pptx" />
+    <None Include="..\..\__resources__\2_C++\C++_Projekte_für_Fortgeschrittene_CMake,_Tests_und_Tooling\2.pdf" />
+    <None Include="..\..\__resources__\2_C++\C++_Projekte_für_Fortgeschrittene_CMake,_Tests_und_Tooling\3.pdf" />
+    <None Include="..\..\__resources__\2_C++\C++_Projekte_für_Fortgeschrittene_CMake,_Tests_und_Tooling\10CPlusPlusProjektefürFortgeschritteneCMakeTestsundTooling.pdf" />
+    <None Include="..\..\__resources__\2_C++\C++_Projekte_für_Fortgeschrittene_CMake,_Tests_und_Tooling\1.pdf" />
+    <None Include="..\..\__resources__\2_C++\CPlusPlus\createExecutableWithC++.pdf" />
+    <None Include="..\..\__resources__\2_C++\0454-c-hackers-guide.pdf" />
+    <None Include="..\..\__resources__\2_C++\269810551.pdf" />
+    <None Include="..\..\__resources__\2_C++\9780321992789.pdf" />
+    <None Include="..\..\__resources__\2_C++\hack.pdf" />
+    <None Include="..\..\__resources__\2_C++\hic0.pdf" />
+    <None Include="..\..\__resources__\2_C++\MalwareAnalysisandDetection.pdf" />
+    <None Include="..\..\__resources__\2_C++\Objektorientiertes_Programmieren_mit_C++.html" />
+    <None Include="..\..\__resources__\C++.pdf" />
+    <None Include="..\..\__resources__\C++_For_DUMMIES.pdf" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\__resources__\cmdLP.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
