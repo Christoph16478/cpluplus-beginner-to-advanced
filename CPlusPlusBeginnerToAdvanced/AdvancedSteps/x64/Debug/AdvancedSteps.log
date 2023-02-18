@@ -1,0 +1,8 @@
+﻿  AdvancedSteps.cpp
+C:\Users\chris\OneDrive\Desktop\Christoph16478_github\cpluplus-beginner-to-advanced\CPlusPlusBeginnerToAdvanced\AdvancedSteps\AdvancedSteps.cpp(70,1): warning C4141: 'inline': used more than once
+C:\Users\chris\OneDrive\Desktop\Christoph16478_github\cpluplus-beginner-to-advanced\CPlusPlusBeginnerToAdvanced\AdvancedSteps\AdvancedSteps.cpp(484,14): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\chris\OneDrive\Desktop\Christoph16478_github\cpluplus-beginner-to-advanced\CPlusPlusBeginnerToAdvanced\AdvancedSteps\AdvancedSteps.cpp(543,2): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\chris\OneDrive\Desktop\Christoph16478_github\cpluplus-beginner-to-advanced\CPlusPlusBeginnerToAdvanced\AdvancedSteps\AdvancedSteps.cpp(425,7): warning C4101: 'pattern': unreferenced local variable
+C:\Users\chris\OneDrive\Desktop\Christoph16478_github\cpluplus-beginner-to-advanced\CPlusPlusBeginnerToAdvanced\AdvancedSteps\AdvancedSteps.cpp(1342,12): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+C:\Users\chris\OneDrive\Desktop\Christoph16478_github\cpluplus-beginner-to-advanced\CPlusPlusBeginnerToAdvanced\AdvancedSteps\AdvancedSteps.cpp(1351,18): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  AdvancedSteps.vcxproj -> C:\Users\chris\OneDrive\Desktop\Christoph16478_github\cpluplus-beginner-to-advanced\CPlusPlusBeginnerToAdvanced\x64\Debug\AdvancedSteps.exe

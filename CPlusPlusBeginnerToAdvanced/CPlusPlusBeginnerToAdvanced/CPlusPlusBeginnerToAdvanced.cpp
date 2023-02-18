@@ -5,8 +5,7 @@
 
 int main()
 {
-
-    // std::cout << "Hello World!\n";
+    std::cout << "learn c++ from beginner to advanced!\n";
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

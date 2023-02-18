@@ -1,0 +1,7 @@
+﻿  Main.cpp
+C:\Users\chris\OneDrive\Desktop\Christoph16478_github\cpluplus-beginner-to-advanced\CPlusPlusBeginnerToAdvanced\FirstSteps\Main.cpp(159,13): warning C4566: character represented by universal-character-name '\uFFFD' cannot be represented in the current code page (1252)
+C:\Users\chris\OneDrive\Desktop\Christoph16478_github\cpluplus-beginner-to-advanced\CPlusPlusBeginnerToAdvanced\FirstSteps\Main.cpp(256,13): warning C4566: character represented by universal-character-name '\uFFFD' cannot be represented in the current code page (1252)
+C:\Users\chris\OneDrive\Desktop\Christoph16478_github\cpluplus-beginner-to-advanced\CPlusPlusBeginnerToAdvanced\FirstSteps\Main.cpp(277,15): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\chris\OneDrive\Desktop\Christoph16478_github\cpluplus-beginner-to-advanced\CPlusPlusBeginnerToAdvanced\FirstSteps\Main.cpp(278,13): warning C4566: character represented by universal-character-name '\uFFFD' cannot be represented in the current code page (1252)
+C:\Users\chris\OneDrive\Desktop\Christoph16478_github\cpluplus-beginner-to-advanced\CPlusPlusBeginnerToAdvanced\FirstSteps\Main.cpp(419,12): error C2440: 'initializing': cannot convert from 'long *' to 'int *'
+C:\Users\chris\OneDrive\Desktop\Christoph16478_github\cpluplus-beginner-to-advanced\CPlusPlusBeginnerToAdvanced\FirstSteps\Main.cpp(419,12): message : Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or parenthesized function-style cast
