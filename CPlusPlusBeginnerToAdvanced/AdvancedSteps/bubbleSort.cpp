@@ -7,7 +7,7 @@ void bubbleSort(int numOfElements, int array[], bool (*compareNumbers)(int, int)
 	bool wasElementSorted;
 	do {
 		wasElementSorted = true;
-		//example: 5 2 9 6 3 0
+		// example: 5 2 9 6 3 0
 		for (int i = 0; i < numOfElements - 1; i++)
 		{
 			if ((*compareNumbers)(array[i], array[i + 1]))

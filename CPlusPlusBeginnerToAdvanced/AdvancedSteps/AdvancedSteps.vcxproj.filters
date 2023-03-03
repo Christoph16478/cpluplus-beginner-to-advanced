@@ -18,9 +18,6 @@
     <ClCompile Include="AdvancedSteps.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\FirstSteps\myPrintFunction.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="binarySearchFunctions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -28,6 +25,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="CarDealer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="myPrintFunction.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

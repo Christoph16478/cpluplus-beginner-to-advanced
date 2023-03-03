@@ -9,8 +9,6 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FirstSteps", "FirstSteps\Fi
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AdvancedSteps", "AdvancedSteps\AdvancedSteps.vcxproj", "{0A016E85-38C4-42A8-9894-D52422B3F837}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BankAccountManagementSystem", "BankAccountManagementSystem\BankAccountManagementSystem.vcxproj", "{EEDC5067-69F9-4E1B-9BE6-D759152F637B}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -43,14 +41,6 @@ Global
 		{0A016E85-38C4-42A8-9894-D52422B3F837}.Release|x64.Build.0 = Release|x64
 		{0A016E85-38C4-42A8-9894-D52422B3F837}.Release|x86.ActiveCfg = Release|Win32
 		{0A016E85-38C4-42A8-9894-D52422B3F837}.Release|x86.Build.0 = Release|Win32
-		{EEDC5067-69F9-4E1B-9BE6-D759152F637B}.Debug|x64.ActiveCfg = Debug|x64
-		{EEDC5067-69F9-4E1B-9BE6-D759152F637B}.Debug|x64.Build.0 = Debug|x64
-		{EEDC5067-69F9-4E1B-9BE6-D759152F637B}.Debug|x86.ActiveCfg = Debug|Win32
-		{EEDC5067-69F9-4E1B-9BE6-D759152F637B}.Debug|x86.Build.0 = Debug|Win32
-		{EEDC5067-69F9-4E1B-9BE6-D759152F637B}.Release|x64.ActiveCfg = Release|x64
-		{EEDC5067-69F9-4E1B-9BE6-D759152F637B}.Release|x64.Build.0 = Release|x64
-		{EEDC5067-69F9-4E1B-9BE6-D759152F637B}.Release|x86.ActiveCfg = Release|Win32
-		{EEDC5067-69F9-4E1B-9BE6-D759152F637B}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -127,11 +127,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\FirstSteps\myPrintFunction.cpp" />
     <ClCompile Include="AdvancedSteps.cpp" />
     <ClCompile Include="binarySearchFunctions.cpp" />
     <ClCompile Include="bubbleSort.cpp" />
     <ClCompile Include="CarDealer.cpp" />
+    <ClCompile Include="myPrintFunction.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="binarySearchFunctions.h" />

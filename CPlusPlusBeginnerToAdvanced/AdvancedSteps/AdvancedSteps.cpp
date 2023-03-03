@@ -1,6 +1,3 @@
-// AdvancedSteps.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
-
 #include <iostream>
 #include <string>
 #include <iomanip>
@@ -89,24 +86,23 @@ public:
 
 int main()
 {
-	// -----------------------------------------------------------------------------------------
-	// VERIFICATION TECHNIQUE ALGORITHM
-	// -----------------------------------------------------------------------------------------
+	cout << "================================= VERIFICATION TECHNIQUE ALGORITHM =================================\n" << endl;
+
 	int i, j;
-	cout << "Please enter two non-negative numbers: ";
+	cout << "please enter two non-negative numbers: ";
 	cin >> i >> j;
-	//Precondition: i >= 0 && j >= 0 
+	// precondition: i >= 0 && j >= 0 
 	int x = i, y = j, z = 0;
-	assert(z + x * y == i * j); //Assertion
-	while (x > 0)	//Example: 2 1
+	assert(z + x * y == i * j); // assertion
+	while (x > 0)	// example: 2 1
 	{
 		if (x % 2 == 1)
 		{
 			z += y;
 		}
-		y *= 2;		//First cycle: x = i = 2; y = j = 1 --> (0 + 2*1 == 2*1)
-		x /= 2;		//Second cycle: z = 2, y = 4, x = 0 --> (2 + 0*4 == 2*1)
-		assert(z + x * y == i * j); //While loop invariant 
+		y *= 2;	// first cycle: x = i = 2; y = j = 1 --> (0 + 2*1 == 2*1)
+		x /= 2;	// second cycle: z = 2, y = 4, x = 0 --> (2 + 0*4 == 2*1)
+		assert(z + x * y == i * j); // while loop invariant 
 
 	}
 	assert(z + x * y == i * j); //Postcondition 
@@ -114,36 +110,33 @@ int main()
 
 
 
+	cout << "================================= VALUE TABLE OF TWO FUNCTIONS =================================\n" << endl;
 
-	// -----------------------------------------------------------------------------------------
-	// VALUE TABLE OF TWO FUNCTIONS
-	// -----------------------------------------------------------------------------------------
-	//For the first called function: starting at i = 0 and is incremented up to i = 1
+	// for the first called function: starting at i = 0 and is incremented up to i = 1
 	for (int i = 0; i < 2; i++)
 	{
 		tabularValue(arrayFunctionPointer[i], i, i + 1, 0.2);
 		cout << endl;
 	}
 
-	// -----------------------------------------------------------------------------------------
-	// SUM OF VECTOR ELEMENTS
-	// -----------------------------------------------------------------------------------------
+	cout << "================================= SUM OF VECTOR ELEMENTS =================================\n" << endl;
+
 	int menuChoice = 0;
 	do {
-		cout << "\tWelcome To The Main Menu For Transcripts Of Students\t" << endl;
-		cout << "1. Look up the scores of any student!" << endl;
-		cout << "2. Add the name of student, subject and the exam score!" << endl;
-		cout << "3. Edit the name of student, subject and the exam score!" << endl;
-		cout << "4. Delete the name of student, subject and the exam score!" << endl;
-		cout << "5. Exit!" << endl;
+		cout << "\twelcome to the main menu for transcripts of students\t" << endl;
+		cout << "1. look up the scores of any student!" << endl;
+		cout << "2. add the name of student, subject and the exam score!" << endl;
+		cout << "3. edit the name of student, subject and the exam score!" << endl;
+		cout << "4. delete the name of student, subject and the exam score!" << endl;
+		cout << "5. exit!" << endl;
 
-		cout << "Please enter your choice: ";
+		cout << "please enter your choice: ";
 		cin >> menuChoice;
 
 		while (menuChoice < 1 || menuChoice > 5)
 		{
-			cout << "Your choice has to be in the range of 1-4" << endl;
-			cout << "Please re-enter your choice: ";
+			cout << "your choice has to be in the range of 1-4" << endl;
+			cout << "please re-enter your choice: ";
 			cin >> menuChoice;
 		}
 
@@ -185,35 +178,32 @@ int main()
 	//printVector(matrix);
 	//cout << "The sum is: " << calculateSum(matrix) << endl;
 
-	// -----------------------------------------------------------------------------------------
-	// SIMPSONS RULE OF DEFINITION INTEGRAL
-	// -----------------------------------------------------------------------------------------
+	cout << "================================= SIMPSONS RULE OF DEFINITION INTEGRAL =================================\n" << endl;
+
 	assert(n % 2 == 0);
 	cout << "Solution to the first integral: " << fixed << setprecision(6) << simpsonsRule(0, 3, usualIntegral) << endl;
 	cout << "Solution to the second integral: " << fixed << setprecision(6) << simpsonsRule(0.1, 1.3, exponentialIntegral) << endl;
 
-	// -----------------------------------------------------------------------------------------
-	// RICHARD EXTRAPOLATION
-	// -----------------------------------------------------------------------------------------
+	cout << "================================= RICHARD EXTRAPOLATION =================================\n" << endl;
+
 	numericalDifferentiation differentiate_f1(1.0, function_1);
 	numericalDifferentiation differentiate_f2(1.0, function_2);
 	differentiate_f1.extrapolation();
 	differentiate_f2.extrapolation();
 
-	// -----------------------------------------------------------------------------------------
-	// RECURSIVE FACTORIAL
-	// -----------------------------------------------------------------------------------------
+
+	cout << "================================= RECURSIVE FACTORIAL =================================\n" << endl;
+
 	int number;
 	cout << "Please type in an integer to calculate the factorial of it: ";
 	cin >> number;
 	cout << counter(number) << endl;
 
-	// -----------------------------------------------------------------------------------------
-	// READING CSV
-	// -----------------------------------------------------------------------------------------
-	//boolean-variable to decide which section of the csv-file should be read in
+	cout << "================================= READING CSV =================================\n" << endl;
+
+	// boolean-variable to decide which section of the csv-file should be read in
 	bool foundStringDelimiter = false;
-	//vector of vectors for holding the data
+	// vector of vectors for holding the data
 	vector<vector<double> > data;
 	ifstream myFile("C:\\Temp\\data_csv.txt", ios::in);
 	if (myFile.is_open())
@@ -222,21 +212,21 @@ int main()
 
 		while (!myFile.eof())
 		{
-			//hold the read in line
+			// hold the read in line
 			string line;
-			//read line from csv-file into line
+			// read line from csv-file into line
 			getline(myFile, line);
 
 			if (foundStringDelimiter)
 			{
 				if (line == "Values #2")
 				{
-					//here the relevant part of the csv-file ends
+					// here the relevant part of the csv-file ends
 					foundStringDelimiter = false;
 				}
 				else
 				{
-					//array for holding the position of the comma
+					// array for holding the position of the comma
 					int commaPos[2];
 					int posIndex = 0;
 
@@ -249,27 +239,27 @@ int main()
 						}
 
 					}
-					//temporary variables for the strings representing x, y and z points
+					// temporary variables for the strings representing x, y and z points
 					string x_string, y_string, z_string;
 					double x_temp, y_temp, z_temp;
 
-					//extracting values by making use of the substr-function
+					// extracting values by making use of the substr-function
 					x_string = line.substr(0, commaPos[0]);
 					y_string = line.substr(commaPos[0] + 1, commaPos[1] - commaPos[0] - 1);
 					z_string = line.substr(commaPos[1] + 1);
 
-					//conversion of string into a double datatype
+					// conversion of string into a double datatype
 					x_temp = atof(x_string.c_str());
 					y_temp = atof(y_string.c_str());
 					z_temp = atof(z_string.c_str());
 
-					//temporary double vector variable
+					// temporary double vector variable
 					vector<double> temp;
 					//add x_temp, y_temp as well as z_temp to the temporary vector
 					temp.push_back(x_temp);
 					temp.push_back(y_temp);
 					temp.push_back(z_temp);
-					//push the temporary vector onto the vector of vectors 
+					// push the temporary vector onto the vector of vectors 
 					data.push_back(temp);
 
 				}
@@ -279,7 +269,7 @@ int main()
 			{
 				if (line == "Values #1")
 				{
-					//here the relevant part in our csv-file starts
+					// here the relevant part in our csv-file starts
 					foundStringDelimiter = true;
 				}
 			}
@@ -292,23 +282,18 @@ int main()
 		cout << "Unable to open the csv-file!" << endl;
 	}
 
-	//close the csv-file
+	// close the csv-file
 	myFile.close();
 
-	//printing the double values
+	// printing the double values
 	for (int i = 0; i < data.size(); i++)
 	{
 		cout << fixed << setprecision(2) << "x = " << data[i][0] << ", y = " << data[i][1] << ", z = " << data[i][2] << endl;
 	}
 
+	cout << "================================= POINTERS =================================\n" << endl;
 
-
-
-
-	// -----------------------------------------------------------------------------------------
-	// POINTERS
-	// -----------------------------------------------------------------------------------------
-	//initialize the first part of the array
+	// initialize the first part of the array
 	int array[] = { 1,2,3,4,5,6,7,8,9,10 };
 	// int* arrayPointer = enlargeArray(array, CAPACITY);
 	for (int i = 0; i < CAPACITY * 2; i++)
@@ -317,10 +302,10 @@ int main()
 	}
 	cout << endl;
 
-	// -----------------------------------------------------------------------------------------
-	// MULTIPLY EVEN AND ODD NUMBERS
-	// -----------------------------------------------------------------------------------------
-	//Alternative solution without functions
+
+	cout << "================================= MULTIPLY EVEN AND ODD NUMBERS =================================\n" << endl;
+	
+	// alternative solution without functions
 	int productOfOddNumbers = 1;
 	int productOfEvenNumbers = 1;
 	int counter = 0;
@@ -345,67 +330,65 @@ int main()
 	cout << "The product of even numbers is: " << evenNumbers(numbers) << endl;
 	cout << "The product of odd numbers is: " << oddNumbers(numbers) << endl;*/
 
-	// -----------------------------------------------------------------------------------------
-	// LINESPACE METHOD
-	// -----------------------------------------------------------------------------------------
-	//declaration of column-arrays 
+	cout << "================================= LINESPACE METHOD =================================\n" << endl;
+
+	// declaration of column-arrays 
 	double col_1[CAPACITY];
 	double col_2[CAPACITY];
-	//initialization of all elements in these two arrays to zeros
+	// initialization of all elements in these two arrays to zeros
 	for (int i = 0; i < CAPACITY; i++)
 	{
 		col_1[i] = 0;
 		col_2[i] = 0;
 	}
-	//declaration of linspace-array holding 10 elements
+	// declaration of linspace-array holding 10 elements
 	double linspace[10];
 
 	for (int i = 0; i < 10; i++)
 	{
 		linspace[i] = 0;
 	}
-	//linspace-array producing 10 elements ranging from 0.0 to 1.0
+	// linspace-array producing 10 elements ranging from 0.0 to 1.0
 	double start, end = 0.0;
-	//adjust the ranges
+	// adjust the ranges
 	start = 0.0;
 	end = 1.0;
 	for (int i = 0; i < 10; i++)
 	{
 		double I = static_cast<double>(i);
 		double n = static_cast<double>(10) - 1;
-		//x_1 + ( (x_2 - x_1) / n) * i
+		// x_1 + ( (x_2 - x_1) / n) * i
 		linspace[i] = start + ((end - start) / n) * I;
-		//cout << "Values produced by the linspace-function: " << linspace[i] << endl;
+		// cout << "Values produced by the linspace-function: " << linspace[i] << endl;
 	}
-	//distribute linspace-function in column 1
+	// distribute linspace-function in column 1
 	for (int i = 0; i < 10; i++)
 	{
 		for (int j = 0; j < 10; j++)
 		{
-			//iteration scheme: i, j = 0 yield col_1[0] = linspace[0] --> 0.0 
-			//i = 1, j = 0 yield col_1[1] = linspace[0] --> 0.0
+			// iteration scheme: i, j = 0 yield col_1[0] = linspace[0] --> 0.0 
+			// i = 1, j = 0 yield col_1[1] = linspace[0] --> 0.0
 			col_1[j * 10 + i] = linspace[j];
 		}
 
 	}
-	//distribute linspace-function in column 2 using a modulo-operator
+	// distribute linspace-function in column 2 using a modulo-operator
 	for (int i = 0; i < CAPACITY; i++)
 	{
-		//iteration scheme: col_2[0] = linspace[0 % 10] = linspace[0] --> 0.0
-		//col_2[1] = linspace[1 % 10] = linspace[1] --> 0.11
-		//...
-		//col_2[10] = linspace[10 % 10] = linspace[0] --> 0.0
+		// iteration scheme: col_2[0] = linspace[0 % 10] = linspace[0] --> 0.0
+		// col_2[1] = linspace[1 % 10] = linspace[1] --> 0.11
+		// ...
+		// col_2[10] = linspace[10 % 10] = linspace[0] --> 0.0
 		col_2[i] = linspace[i % 10];
 	}
-	//printing the two columns 
+	// printing the two columns 
 	for (int i = 0; i < CAPACITY; i++)
 	{
 		cout << setprecision(3) << fixed << col_1[i] << "\t" << col_2[i] << endl;
 	}
 
-	// -----------------------------------------------------------------------------------------
-	// DISPLAY
-	// -----------------------------------------------------------------------------------------
+	cout << "================================= DISPLAY =================================\n" << endl;
+
 	vector<int> myVector;
 	// fillVector(myVector);
 	printVector(myVector);
@@ -419,9 +402,8 @@ int main()
 	else
 		cout << "The number was not typed in before!" << endl;
 
-	// -----------------------------------------------------------------------------------------
-	// DISPLAY
-	// -----------------------------------------------------------------------------------------
+	cout << "================================= DISPLAY =================================\n" << endl;
+
 	char pattern[ROWS][COLS];
 	DisplayA();
 	DisplayI();
@@ -429,9 +411,8 @@ int main()
 	DisplayPlus();
 	DisplayX();
 
-	// -----------------------------------------------------------------------------------------
-	// EXAM SCORE
-	// -----------------------------------------------------------------------------------------
+	cout << "================================= EXAM SCORE =================================\n" << endl;
+
 	int examM, examP, examC, examE;
 	for (int i = 0; i < 4; i++)
 	{
@@ -456,9 +437,8 @@ int main()
 	findHighestScore(examM, examP, examC, examE);
 	findAverageScore(examM, examP, examC, examE);
 
-	// -----------------------------------------------------------------------------------------
-	// EULERS NUMBER
-	// -----------------------------------------------------------------------------------------
+	cout << "================================= EULERS NUMBER =================================\n" << endl;
+
 	int number2;
 	cout << "Please type in a value for approximating Euler's number: ";
 	cin >> number2;
@@ -474,9 +454,8 @@ int main()
 	cout << e << endl;*/
 	cout << "The approximated value for Euler's number is: " << infiniteSeries(number2) << endl;
 
-	// -----------------------------------------------------------------------------------------
-	// DEGREE TO RADIAN
-	// -----------------------------------------------------------------------------------------
+	cout << "================================= DEGREE TO RADIAN =================================\n" << endl;
+
 	float r = 0.0f;
 	cout << "Conversion of 1 - 360 degrees to radians: " << endl;
 	for (int i = 1; i <= 360; i++)
@@ -502,40 +481,38 @@ int main()
 	//sum += (*C).value();
 	//cout << "The total price of all ordered cars is: " << sum << " Euros\n";
 
-	// -----------------------------------------------------------------------------------------
-	// BUBBLE SORT ALGORITHM
-	// -----------------------------------------------------------------------------------------
+	cout << "================================= BUBBLE SORT ALGORITHM =================================\n" << endl;
+
 	int array1[NUM_ELEMENTS];
 	for (int i = 0; i < NUM_ELEMENTS; i++)
 	{
 		array1[i] = (17 * i + 5) % 10;
 	}
-	cout << "Current array filled with arbitrary numbers: " << endl;
+	cout << "current array filled with arbitrary numbers: " << endl;
 	for (int i = 0; i < NUM_ELEMENTS; i++)
 	{
 		cout << array1[i] << " ";
 	}
 	cout << endl;
 	bubbleSort(NUM_ELEMENTS, array1, ascendingSort);
-	cout << "Sorted in an ascending way: " << endl;
+	cout << "sorted in an ascending way: " << endl;
 	for (int i = 0; i < NUM_ELEMENTS; i++)
 	{
 		cout << array1[i] << " ";
 	}
 	cout << endl;
 	bubbleSort(NUM_ELEMENTS, array1, descendingSort);
-	cout << "Sorted in an descending way: " << endl;
+	cout << "sorted in an descending way: " << endl;
 	for (int i = 0; i < NUM_ELEMENTS; i++)
 	{
 		cout << array1[i] << " ";
 	}
 	cout << endl;
 
-	// -----------------------------------------------------------------------------------------
-	// BINARY TO DECIMAL
-	// -----------------------------------------------------------------------------------------
+	cout << "================================= BINARY TO DECIMAL =================================\n" << endl;
+
 	string line = "";
-	cout << "Please enter a binary number to convert to its decimal equivalent: ";
+	cout << "please enter a binary number to convert to its decimal equivalent: ";
 	getline(cin, line);
 	int decimalNumber = 0;
 	int binaryNumber = 0;
@@ -570,9 +547,8 @@ int main()
 	//else
 	//	cout << "The number was not typed in before! " << endl;
 
-	// -----------------------------------------------------------------------------------------
-	// BODYMAS INDEX
-	// -----------------------------------------------------------------------------------------
+	cout << "================================= BODYMAS INDEX =================================\n" << endl;
+	
 	int age;
 	int height;
 	double weight;
@@ -591,12 +567,12 @@ int main()
 		cout << "Please type in the weight [kg]: ";
 		cin >> weight;
 
-		//passing the parameters in using the Overload constructor
+		// passing the parameters in using the Overload constructor
 		// BMR Female(age, height, weight);
-		//cout << "The age of the patient is: " << Female.getAge() << endl;
-		//cout << "The height of the patient is: " << Female.getHeight() << endl;
-		//cout << "The weight of the patient is: " << Female.getWeight() << endl;
-		//cout << "The BMR rate of the patient is: " << Female.calculateBMRFemale() << " [kcal]\n";
+		// cout << "The age of the patient is: " << Female.getAge() << endl;
+		// cout << "The height of the patient is: " << Female.getHeight() << endl;
+		// cout << "The weight of the patient is: " << Female.getWeight() << endl;
+		// cout << "The BMR rate of the patient is: " << Female.calculateBMRFemale() << " [kcal]\n";
 	}
 	else
 	{
@@ -610,82 +586,81 @@ int main()
 		cin >> weight;
 
 		// BMR Male;
-		//passing in the parameters using the Mutator function
-		//Male.setAge(age);
-		//Male.setHeight(height);
-		//Male.setWeight(weight);
+		// passing in the parameters using the Mutator function
+		// Male.setAge(age);
+		// Male.setHeight(height);
+		// Male.setWeight(weight);
 
-		//cout << "The age of the patient is: " << Male.getAge() << endl;
-		//cout << "The height of the patient is: " << Male.getHeight() << endl;
-		//cout << "The weight of the patient is: " << Male.getWeight() << endl;
-		//cout << "The BMR rate of the patient is: " << Male.calculateBMRMale() << " [kcal]\n";
+		// cout << "The age of the patient is: " << Male.getAge() << endl;
+		// cout << "The height of the patient is: " << Male.getHeight() << endl;
+		// cout << "The weight of the patient is: " << Male.getWeight() << endl;
+		// cout << "The BMR rate of the patient is: " << Male.calculateBMRMale() << " [kcal]\n";
 	}
 
-    // -----------------------------------------------------------------------------------------
-    // 2D ARRAYS
-    // -----------------------------------------------------------------------------------------
-	int row, col;
-	//declare array as a pointer to pointers
-	int** array0;
-	//ask for user input
-	cout << "Enter number of rows: ";
-	cin >> row;
-	cout << "Enter number of cols: ";
-	cin >> col;
-	//creation of an array of int pointers
-	array0 = new int* [row];
-	//whatever the value for row/col will be, so many times the array is created
-	//e.g. if row, col = 2 then we will get a 2x2-matrix (4 integers)
-	for (int i = 0; i < row; i++)
-	{
-		array0[i] = new int[col];
-	}
-	for (int i = 0; i < row; i++)
-	{
-		for (int j = 0; j < col; j++)
-		{
-			//initialize all elements to zero
-			//array[i][j] = 0;
-			array0[0][0] = 0;
-			array0[0][1] = 1;
-			array0[1][0] = 2;
-			array0[1][1] = 3;
+	cout << "================================= 2D ARRAYS =================================\n" << endl;
 
-		}
+	//int row, col;
+	//// declare array as a pointer to pointers
+	//int** array0;
+	//// ask for user input
+	//cout << "Enter number of rows: ";
+	//cin >> row;
+	//cout << "Enter number of cols: ";
+	//cin >> col;
+	//// creation of an array of int pointers
+	//array0 = new int* [row];
+	//// whatever the value for row/col will be, so many times the array is created
+	//// e.g. if row, col = 2 then we will get a 2x2-matrix (4 integers)
+	//for (int i = 0; i < row; i++)
+	//{
+	//	array0[i] = new int[col];
+	//}
+	//for (int i = 0; i < row; i++)
+	//{
+	//	for (int j = 0; j < col; j++)
+	//	{
+	//		// initialize all elements to zero
+	//		// array[i][j] = 0;
+	//		array0[0][0] = 0;
+	//		// array0[0][1] = 1; // C6386 Buffer overrun while writting to <COMPLEX_EXPR>
+	//		array0[1][0] = 2;
+	//		array0[1][1] = 3;
 
-	}
-	//memory deallocation: deleting the dynamically created array 
-	for (int i = 0; i < row; i++)
-	{
-		delete[] array0[i];
-		delete[] array0;
+	//	}
 
-		//delete also pointer itself from memory
-		array0 = NULL;
-	}
-	//print the matrix
-	for (int i = 0; i < row; i++)
-	{
-		for (int j = 0; j < col; j++)
-		{
-			cout << array0[i][j] << " ";
-		}
-		cout << endl;
-	}
-	//memory deallocation: deleting the dynamically created array 
-	for (int i = 0; i < row; i++)
-	{
-		delete[] array0[i];
-		delete[] array0;
+	//}
+	//// memory deallocation: deleting the dynamically created array 
+	//for (int i = 0; i < row; i++)
+	//{
 
-		//delete also pointer itself from memory
-		array0 = NULL;
-	}
+	//	delete[] array0[i];
+	//	delete[] array0;
 
-	// -----------------------------------------------------------------------------------------
-	// FIRST FUNCTION CALL
-	// -----------------------------------------------------------------------------------------
-    system("chcp 125");
+	//	// delete also pointer itself from memory
+	//	array0 = NULL;
+	//}
+	//// print the matrix
+	//for (int i = 0; i < row; i++)
+	//{
+	//	for (int j = 0; j < col; j++)
+	//	{
+	//		// cout << array0[i][j] << " "; // C6011 Dereferencing NULL pointer <COMPLEX_EXPR>
+	//	}
+	//	cout << endl;
+	//}
+	//// memory deallocation: deleting the dynamically created array 
+	//for (int i = 0; i < row; i++)
+	//{
+	//	delete[] array0[i];
+	//	delete[] array0;
+
+	//	// delete also pointer itself from memory
+	//	array0 = NULL;
+	//}
+
+	cout << "================================= FIRST FUNCTION CALL =================================\n" << endl;
+
+	system("chcp 125");
     setlocale(LC_ALL, "German");
 
     print_hello_world();
@@ -853,14 +828,12 @@ void editStudent()
 				cout << "You exited the program!" << endl;
 				break;
 			}
-
-
 		} while (submenuChoice != 4);
-
 	}
 	else
+	{
 		cout << "The student you are looking for is not in the list!" << endl;
-
+	}
 }
 
 void deleteStudent()
